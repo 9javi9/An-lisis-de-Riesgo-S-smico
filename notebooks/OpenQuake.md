@@ -79,6 +79,8 @@ mean_hazard_curves = True
 quantile_hazard_curves = 0.15, 0.50, 0.85
 hazard_maps = True
 uniform_hazard_spectra = True
+
 # using the POEs for return periods of 2475, 975, 475, 225, and 75 years
-poes = 0.020  0.05 0.1 0.20 0.5
-individual_curves = True ```
+poes = 0.020 0.05 0.1 0.20 0.5
+individual_curves = True
+```
