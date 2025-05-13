@@ -13,7 +13,7 @@ Se consideran las 33 fuentes simogénicas propuestas en el estudio de Peligro S�
 - Subducción intraplacal: F20-F33
 
 <p align="center">
-  <img src="../IMG/ZS.png" width="400" alt="PGA Map"/>
+  <img src="../IMG/ZS.png" width="400" alt="Fuentes generadoras"/>
   <br>
   <em>Fuente: Instituto Geofísico del Perú (IGP)</em>
 </p>
