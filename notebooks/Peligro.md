@@ -43,7 +43,7 @@ donde:
 
 - \\(N_s\\) es el número de fuentes sismogénicas consideradas.
 - \\(nu_i(M)\\) representa la **tasa anual de ocurrencia** de sismos de magnitud M en la fuente i, obtenida a partir de su modelo de recurrencia sísmica.
-- \\( f_{R|M}(R \mid M) \\)es la función de densidad de probabilidad de la distancia $R$ al sitio, condicional a la magnitud **M**.
+- \\( f_{(R \mid M)} \\)es la función de densidad de probabilidad de la distancia $R$ al sitio, condicional a la magnitud **M**.
 - \\(P(IM > x \mid M, R)\\) es la probabilidad de que la intensidad del movimiento del suelo supere el valor **x**, dado un sismo de magnitud **M** a una distancia **R**, determinada a través de **leyes de atenuación** (GMPEs).
 
 Esta integral se evalúa para cada fuente sismogénica y sus resultados se suman, obteniendo así la contribución total de todas las fuentes a la amenaza sísmica del sitio.
