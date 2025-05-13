@@ -1,17 +1,12 @@
-site_name: Evaluación de Riesgo Sísmico
-site_url: https://9javi9.github.io/Analisis-de-Riesgo-Sismico/
-theme:
-  name: material
-  icon:
-    repo: fontawesome/brands/github
-  features:
-    - navigation.tabs
-    - navigation.instant
-    - search.suggest
-    - content.code.copy
-    - content.action.edit
-repo_url: https://github.com/9javi9/Analisis-de-Riesgo-Sismico.git
-repo_name: GitHub
+title: Evaluación de Riesgo Sísmico
+description: "Sitio sobre análisis de riesgo sísmico."
+baseurl: ""  # Si lo vas a usar en GitHub Pages, deja este campo vacío
+url: "https://9javi9.github.io"  # Tu dominio de GitHub Pages
+
+theme: jekyll-theme-cayman  # Puedes elegir el tema que prefieras
+
+plugins:
+  - jekyll-feed
 
 nav:
   - Home: index.md
