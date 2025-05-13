@@ -61,6 +61,42 @@ $$
 
 bajo el supuesto de que los eventos sísmicos ocurren de manera independiente y conforme a un proceso de Poisson.
 
+## Estimación de la Superficie de Ruptura Sísmica
+
+La estimación de la superficie de ruptura sísmica puede abordarse mediante distintos modelos, siendo comunes aquellos que emplean relaciones exponenciales en función de la magnitud.
+
+### Radio de ruptura
+
+$$
+R = \sqrt{\frac{K_1 e^{K_2 M}}{\pi}}
+$$
+
+### Valores empíricos
+
+| **Referencia**                              | **$K_1$** | **$K_2$**  |
+|--------------------------------------------|-----------|------------|
+| Brune (1970)                                | 0.00381   | 1.15130    |
+| _Singh et al. (1980)_                       | 0.00564   | 1.15130    |
+| **Wells and Coppersmith (1994)** Strike-slip| 0.01100   | 1.03616    |
+| **Wells and Coppersmith (1994)** Reverse    | 0.00571   | 1.12827    |
+| **Wells and Coppersmith (1994)** Normal     | 0.02072   | 0.94406    |
+| **Wells and Coppersmith (1994)** All        | 0.01015   | 1.04768    |
+
+## Estimación de la Variabilidad del Parámetro $\beta$
+
+El coeficiente de variación del parámetro $\beta$ en el modelo de Gutenberg-Richter se puede estimar utilizando el método de máxima verosimilitud (MLE), mediante el cálculo de la varianza del estimador $\hat{\beta}$:
+
+$$
+CV_{\beta} = \frac{\sigma_{\beta}}{\beta} = \frac{1}{\sqrt{n}}
+$$
+
+## Estimación del Valor Extremo de Magnitud Truncada $M_u$
+
+Para la estimación del valor extremo de magnitud truncada $M_u$, se puede emplear el método propuesto por **Kijko & Graham (1998)**. De manera conservadora, en ausencia de una base de datos suficientemente robusta, se recomienda asumir como valor esperado de $M_u$:
+
+- el máximo del catálogo + 0.2 a 0.3 unidades,  
+- con un coeficiente de variación (CV) de aproximadamente **0.2**.
+
 A continuación se presentan los siguientes submodulos:
 
 <script type="text/javascript"
