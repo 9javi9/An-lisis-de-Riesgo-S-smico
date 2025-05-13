@@ -3,7 +3,7 @@ title: Home
 nav_order: 1
 ---
 
-# Análisis de Riesgo Sísmico
+# **Análisis de Riesgo Sísmico**
 
 
 <img src="IMG/PGA.png" width="400" style="display:block; margin:auto;"/>
