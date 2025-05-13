@@ -1,7 +1,7 @@
 ---
 title: Espectros
 parent: Peligro Sísmico
-nav_order: 3
+nav_order: 4
 ---
 
 # Espectros de Peligro Uniforme en las ciudades del Perú
