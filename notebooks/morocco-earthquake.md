@@ -1,3 +1,9 @@
+---
+title: Morocco earthquake
+parent: Notebooks
+nav_order: 1
+---
+
 # Morocco earthquake
 
 **Visualizing Maxar Open Data for the 2023 Morocco Earthquake with Leafmap**
