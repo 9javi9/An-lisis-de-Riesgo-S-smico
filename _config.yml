@@ -17,3 +17,5 @@ nav_sort: case_sensitive
 
 plugins:
   - jekyll-feed
+
+footer_content: footer_custom
