@@ -97,6 +97,75 @@ Para la estimación del valor extremo de magnitud truncada \\(M_u\\), se puede e
 - el máximo del catálogo + 0.2 a 0.3 unidades,  
 - con un coeficiente de variación (CV) de aproximadamente **0.2**.
 
+# Modelos de Atenuación (GMPEs) en el Contexto Sísmico Peruano
+
+Existe una amplia variedad de modelos de atenuación (Ground Motion Prediction Equations, GMPEs) desarrollados internacionalmente. Varios de estos han sido evaluados y recomendados para representar adecuadamente la amenaza sísmica en el Perú, considerando tanto eventos de **subducción** (interplaca e intraplaca) como **eventos corticales** (fallas superficiales).
+
+A continuación se detallan algunos de los modelos comúnmente empleados y disponibles en **OpenQuake**, clasificados por tipo de fuente sísmica.
+
+## Subducción Interplaca (Interface)
+
+### `YoungsEtAl1997SInter`
+- Uno de los primeros modelos ampliamente utilizados para zonas de subducción.
+- Basado en eventos en el Pacífico, Japón y México.
+- Abarca un amplio rango de magnitudes y distancias.
+
+### `ZhaoEtAl2006SInter`
+- Desarrollado para Japón usando una base de datos extensa y moderna.
+- Incluye efectos de profundidad focal y mecanismos de ruptura.
+- Compatible con condiciones locales variables.
+
+### `AbrahamsonEtAl2015SInter`
+- Parte del conjunto de modelos NGA-Subduction.
+- Incorpora una base de datos global moderna.
+- Ajustado para mejorar la estimación de incertidumbre epistemológica.
+
+### `MontalvaEtAl2016SInter`
+- Modelo latinoamericano con enfoque en Chile y Perú.
+- Ajustado para condiciones geotectónicas similares a las de la región andina.
+- Ofrece una opción más representativa para escenarios regionales.
+
+## Subducción Intraplaca (Intraslab)
+
+### `YoungsEtAl1997Subduction`
+- Extensión del modelo de Youngs para eventos profundos intraplaca.
+- Utilizado históricamente en varias regiones del Pacífico.
+
+### `ZhaoEtAl2006SSlab`
+- Variante del modelo japonés de Zhao para eventos intraslab.
+- Considera diferencias en atenuación y mecanismos focales.
+
+### `AbrahamsonEtAl2015SSlab`
+- Parte del modelo NGA-Subduction para eventos en la losa.
+- Representa bien la amplificación del movimiento sísmico en profundidad.
+
+### `GhofraniAtkinson2014Intraslab`
+- Desarrollado con datos de Canadá y compatible con zonas de subducción.
+- Integra efectos de sitio y parámetros de distancia más precisos para losas profundas.
+
+## Falla Cortical (Crustal)
+
+### `BooreAtkinson2008`
+- Modelo NGA para eventos someros en falla cortical.
+- Incluye efecto de sitio Vs30 y términos de distancia ajustados.
+- Recomendado para estructuras cercanas a fuentes superficiales.
+
+### `ChiouYoungs2008`
+- Otro modelo NGA de amplio uso, basado en datos globales.
+- Incorpora parámetros como profundidad, tipo de ruptura y Vs30.
+
+### `CampbellBozorgnia2014`
+- Modelo NGA-West2 con enfoque en rupturas someras.
+- Mejorado con nuevos términos para directividad y mecanismos de falla.
+
+### `AbrahamsonSilva2008`
+- Parte de NGA-West1, ampliamente utilizado en escenarios urbanos.
+- Considera incertidumbre aleatoria y variabilidad regional.
+
+---
+
+> **Nota:** Para aplicaciones en Perú, es recomendable seleccionar GMPEs considerando tanto el tipo de evento como la geología local, realizando ajustes o ponderaciones si se emplean en conjunto mediante lógica de rama lógica (logic tree).
+
 A continuación se presentan los siguientes submodulos:
 
 <script type="text/javascript"
