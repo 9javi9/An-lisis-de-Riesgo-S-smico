@@ -19,6 +19,9 @@ head:
 # Opcional: orden de navegación
 nav_sort: case_sensitive
 
+markdown: kramdown 
+highlighter: rouge
+
 plugins:
   - jekyll-feed
 
