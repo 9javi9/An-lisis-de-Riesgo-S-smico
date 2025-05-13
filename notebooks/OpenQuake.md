@@ -12,6 +12,10 @@ Entre las principales ventajas de OpenQuake frente a CRISIS 2007 se encuentra su
 
 ## Modelo Probabilistico Peruano
 
+El primer paso en el proceso consiste en generar el archivo job.ini, que establece los parámetros esenciales para la simulación de peligros sísmicos. En este archivo se define detalladamente el área de estudio, especificando las coordenadas geográficas que delimitan la región a analizar. Además, se establece la discretización espacial, lo que permite dividir el área en una malla que facilita la resolución del modelo sísmico. A través de este archivo, también se configuran los periodos de retorno correspondientes a diferentes niveles de riesgo sísmico, lo cual es fundamental para calcular las probabilidades de ocurrencia de terremotos de determinada magnitud durante un período de tiempo específico.
+
+Además, en el archivo job.ini se definen los periodos estructurales, los cuales son utilizados para modelar la respuesta sísmica de las estructuras en función de sus características dinámicas. Estos periodos estructurales permiten ajustar el modelo sísmico a las condiciones específicas de las edificaciones que se encuentran en la región de estudio, facilitando la evaluación precisa del riesgo sísmico y el diseño adecuado de las infraestructuras.
+
 ```ini
 [general]
 
@@ -80,7 +84,129 @@ quantile_hazard_curves = 0.15, 0.50, 0.85
 hazard_maps = True
 uniform_hazard_spectra = True
 
-# using the POEs for return periods of 2475, 975, 475, 225, and 75 years
-poes = 0.020 0.05 0.1 0.20 0.5
+# using the POEs for return periods of 2475,1500, 975, 475, 225, and 75 years
+poes = 0.020 0.033 0.05 0.1 0.20 0.5
 individual_curves = True
 ```
+
+Se crea un archivo .xml que asigna las leyes de atenuación a las diversas fuentes sísmicas, lo cual es esencial para modelar el comportamiento de las ondas sísmicas a medida que se propagan a través de la corteza terrestre. Este archivo también incluye árboles de decisión, que permiten incorporar los errores epistémicos en el modelo sísmico. Los árboles de decisión son una herramienta poderosa para manejar la incertidumbre inherente a las predicciones sísmicas, permitiendo seleccionar las mejores leyes de atenuación en función de distintos escenarios y parámetros. De este modo, se garantiza que las estimaciones de peligro sísmico sean más robustas, considerando diferentes hipótesis y aproximaciones.
+
+El archivo .xml no solo define las leyes de atenuación, sino que también organiza la información de manera estructurada, facilitando la integración de diferentes modelos de fuentes sísmicas y las correspondientes funciones de atenuación. Este enfoque asegura que los resultados del análisis sísmico sean coherentes y adaptables a las variaciones en los parámetros de entrada, considerando tanto los aspectos físicos como las incertidumbres epistemológicas que podrían afectar la precisión de las predicciones de peligro sísmico.
+
+```ini
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.4">
+    <logicTree logicTreeID="lt1">
+
+<!-- 1.0 Logic Tree for Active Shallow Crust -->
+
+        <logicTreeBranchingLevel branchingLevelID="_bl01">
+            <logicTreeBranchSet branchSetID="_bs01" uncertaintyType="gmpeModel"
+                    applyToTectonicRegionType="Active Shallow Crust">
+
+                <logicTreeBranch branchID="b11">
+                    <uncertaintyModel>BooreAtkinson2008</uncertaintyModel>
+                    <uncertaintyWeight>0.3</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="b12">
+                    <uncertaintyModel>ChiouYoungs2008</uncertaintyModel>
+                    <uncertaintyWeight>0.3</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="b13">
+                    <uncertaintyModel>CampbellBozorgnia2014</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="b14">
+                    <uncertaintyModel>AbrahamsonSilva2008</uncertaintyModel>
+                    <uncertaintyWeight>0.2</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+<!-- 2.0 Logic Tree for Interface Zone -->
+
+        <logicTreeBranchingLevel branchingLevelID="_bl02">
+
+            <logicTreeBranchSet branchSetID="_bs02" uncertaintyType="gmpeModel"
+                    applyToTectonicRegionType="Subduction Interface">
+
+                <logicTreeBranch branchID="b21">
+                    <uncertaintyModel>AbrahamsonEtAl2015SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.20</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="b22">
+                    <uncertaintyModel>MontalvaEtAl2016SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.20</uncertaintyWeight>
+                </logicTreeBranch>
+                    
+                <logicTreeBranch branchID="b23">
+                    <uncertaintyModel>ZhaoEtAl2006SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.20</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="b24">
+                    <uncertaintyModel>YoungsEtAl1997SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.20</uncertaintyWeight>
+                </logicTreeBranch>
+
+                <logicTreeBranch branchID="b25">
+                    <uncertaintyModel>LinLee2008SInter</uncertaintyModel>
+                    <uncertaintyWeight>0.20</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+
+        <logicTreeBranchingLevel branchingLevelID="_bl03">
+
+            <logicTreeBranchSet branchSetID="_bs03" uncertaintyType="gmpeModel"
+                    applyToTectonicRegionType="Subduction IntraSlab">
+
+                <logicTreeBranch branchID="b31">
+                    <uncertaintyModel>AbrahamsonEtAl2014</uncertaintyModel>
+                    <uncertaintyWeight>0.5</uncertaintyWeight>
+                </logicTreeBranch>
+                <logicTreeBranch branchID="b32">
+                    <uncertaintyModel>ZhaoEtAl2006SSlab</uncertaintyModel>
+                    <uncertaintyWeight>0.5</uncertaintyWeight>
+                </logicTreeBranch>
+
+            </logicTreeBranchSet>
+
+        </logicTreeBranchingLevel>
+
+    </logicTree>
+</nrml>
+```
+
+Se generan dos archivos adicionales en formato .xml que son fundamentales para la definición detallada de las fuentes generadoras de sismos y la implementación de árboles de decisión. El primer archivo define las fuentes sísmicas, especificando su ubicación, tipo y características geofísicas, lo que permite modelar con precisión la actividad sísmica en la región de estudio. El segundo archivo, dedicado a los árboles de decisión, tiene como objetivo reducir los errores de las fuentes generadoras mediante la incorporación de diferentes escenarios y consideraciones epistémicas. Estos árboles de decisión permiten evaluar la probabilidad de ocurrencia de distintos eventos sísmicos y seleccionar las fuentes más representativas para cada caso, considerando las variaciones en la información y reduciendo la incertidumbre asociada al modelo.
+
+```ini
+<?xml version="1.0" encoding="UTF-8"?>
+<nrml xmlns:gml="http://www.opengis.net/gml"
+      xmlns="http://openquake.org/xmlns/nrml/0.4">
+    <logicTree logicTreeID="lt1">
+        <logicTreeBranchingLevel branchingLevelID="bl1">
+            <logicTreeBranchSet uncertaintyType="sourceModel"
+                                branchSetID="bs1">
+                <logicTreeBranch branchID="b1">
+			    <uncertaintyModel>source_model_Peru_Grupo1.xml</uncertaintyModel>
+                    <uncertaintyWeight>1.0</uncertaintyWeight>
+                </logicTreeBranch>
+            </logicTreeBranchSet>
+        </logicTreeBranchingLevel>
+    </logicTree>
+</nrml>
+```
+
+<p align="center">
+  <img src="../IMG/MAPA_SA(0.1)_OQ.png" width="700" alt="PGA Map"/>
+  <br>
+  <em>Fuente: Elaborado por Javier Alonso Jaimes Cucho</em>
+</p>
