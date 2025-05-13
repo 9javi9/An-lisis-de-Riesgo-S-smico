@@ -1,6 +1,6 @@
 ---
-title: Peligro
-parent: Notebook
+title: Peligro Sísmico
+parent: Modulos
 nav_order: 1
 ---
 
@@ -59,3 +59,9 @@ P(IM > x; T) = 1 - e^{-\lambda(IM > x) \cdot T}
 $$
 
 bajo el supuesto de que los eventos sísmicos ocurren de manera independiente y conforme a un proceso de Poisson.
+
+<script type="text/javascript"
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
