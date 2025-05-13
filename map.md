@@ -13,9 +13,12 @@ nav_order: 3
 
 **Claudia Melani Cucchi Quispe**
 - Modelamiento probabilístico en Crisis2007
+
 **Maria Elena Ahumado Ponce**
 - Modelamiento probabilístico en Crisis2007
+  
 **Brian Jense Caxi Lupaca**
 - Modelamiento probabilístico en Crisis2007
+
 **Johan James Hinostroza Yucra**
 - Modelamiento probabilístico en Crisis2007
