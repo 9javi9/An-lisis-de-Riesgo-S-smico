@@ -10,8 +10,7 @@ theme:
     - search.suggest
     - content.code.copy
     - content.action.edit
-
-repo_url: https://github.com/<TU_USUARIO>/<NOMBRE_DEL_REPO>
+repo_url: https://github.com/9javi9/Analisis-de-Riesgo-Sismico.git
 repo_name: GitHub
 
 nav:
@@ -25,3 +24,4 @@ nav:
       - Cheatsheet: markdown/cheatsheet.md
   - YouTube Channel: youtube.md
   - Report Issues: issues.md
+footer_content: ""  # Esto borra el texto inferior
