@@ -2,7 +2,7 @@
 title: Curvas de Nivel
 parent: Peligro Sísmico
 nav_order: 6
-permalink: /mapa/Aceleracion_en_Gals/
+permalink: /mapa/m1/
 ---
 
 # Curvas de Nivel a nivel Nacional (PGA)
