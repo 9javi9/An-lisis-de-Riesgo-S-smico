@@ -1,22 +1,19 @@
 title: Evaluación de Riesgo Sísmico
 description: "Sitio sobre análisis de riesgo sísmico."
-baseurl: ""  # Si lo vas a usar en GitHub Pages, deja este campo vacío
-url: "https://9javi9.github.io"  # Tu dominio de GitHub Pages
+baseurl: "/Analisis-de-Riesgo-Sismico"  # Ruta después del dominio
+url: "https://9javi9.github.io"         # Dominio base de GitHub Pages
 
-theme: jekyll-theme-cayman  # Puedes elegir el tema que prefieras
+remote_theme: just-the-docs/just-the-docs
+
+repository_url: https://github.com/9javi9/Analisis-de-Riesgo-Sismico
+repository_branch: main
+search_enabled: true
+aux_links:
+  "Reportar problema":
+    - https://github.com/9javi9/Analisis-de-Riesgo-Sismico/issues
+
+# Opcional: orden de navegación
+nav_sort: case_sensitive
 
 plugins:
   - jekyll-feed
-
-nav:
-  - Home: index.md
-  - Notebook:
-      - Goes timelapse: notebooks/goes-timelapse.md
-      - Pakistan floods: notebooks/pakistan-floods.md
-      - Morocco earthquake: notebooks/morocco-earthquake.md
-  - Blog: blog.md
-  - Markdown:
-      - Cheatsheet: markdown/cheatsheet.md
-  - YouTube Channel: youtube.md
-  - Report Issues: issues.md
-footer_content: Creado por Javier Alonso Jaimes Cucho 
