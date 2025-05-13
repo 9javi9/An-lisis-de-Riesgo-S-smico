@@ -206,7 +206,7 @@ Se generan dos archivos adicionales en formato .xml que son fundamentales para l
 ```
 
 <p align="center">
-  <img src="../IMG/MAPA_SA(0.1)_OQ.png" width="700" alt="PGA Map"/>
+  <img src="../IMG/MAPA_PGA_OQ.png" width="700" alt="PGA Map"/>
   <br>
   <em>Fuente: Elaborado por Javier Alonso Jaimes Cucho</em>
 </p>
