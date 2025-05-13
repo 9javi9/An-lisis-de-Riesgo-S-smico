@@ -2,7 +2,7 @@
 title: Visor con puntos
 parent: Peligro Sísmico
 nav_order: 5
-permalink: /mapa/mapa_peru
+permalink: /mapa/mapa_peru/
 ---
 # Visor PGA a nivel nacional
 
