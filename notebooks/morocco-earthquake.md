@@ -1,6 +1,6 @@
 ---
 title: Morocco earthquake
-parent: Notebooks
+parent: notebooks
 nav_order: 1
 ---
 
