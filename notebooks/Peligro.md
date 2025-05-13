@@ -27,13 +27,13 @@ Esta probabilidad se calcula asumiendo que los sismos siguen un proceso de **Poi
 - La probabilidad de ocurrencia en un intervalo corto de tiempo es proporcional a la duración del mismo.
 - La probabilidad de que más de un sismo ocurra en un intervalo de tiempo muy corto es despreciable.
 
-Adicionalmente, se considera que la **intensidad sísmica** ($I$) en un sitio depende tanto del tamaño del sismo (representado por su magnitud $s$) como de su distancia ($r$) al sitio de interés. Estas variables se modelan como aleatorias continuas mediante funciones de densidad de probabilidad $f_s(s)$ y $f_r(r)$. Así, la probabilidad de que la intensidad sísmica supere un valor $i$ se expresa como $P(I \geq i)$, integrando las contribuciones de todos los posibles escenarios sismológicos y sus efectos en el sitio.
+Adicionalmente, se considera que la **intensidad sísmica** (**I**) en un sitio depende tanto del tamaño del sismo (representado por su magnitud **s**) como de su distancia (**r**) al sitio de interés. Estas variables se modelan como aleatorias continuas mediante funciones de densidad de probabilidad \\(f_s(s)\\) y \\(f_r(r)\\). Así, la probabilidad de que la intensidad sísmica supere un valor **i** se expresa como \\(P(I \geq i)\\), integrando las contribuciones de todos los posibles escenarios sismológicos y sus efectos en el sitio.
 
 ---
 
 ### Tasa anual de excedencia
 
-La **tasa anual de excedencia** de una intensidad sísmica $IM$ superior a un umbral $x$ en un sitio específico se define como:
+La **tasa anual de excedencia** de una intensidad sísmica IM superior a un umbral x en un sitio específico se define como:
 
 $$
 \lambda(IM > x) = \sum_{i=1}^{N_s} \iint_S \int_{M_{min}}^{M_{max}} \int_{R_{min}}^{R_{max}} \nu_i(M) \cdot f_R(R|M) \cdot P(IM > x \mid M, R) \, dR \, dM \, dS
@@ -41,10 +41,10 @@ $$
 
 donde:
 
-- $N_s$ es el número de fuentes sismogénicas consideradas.
-- $\nu_i(M)$ representa la **tasa anual de ocurrencia** de sismos de magnitud $M$ en la fuente $i$, obtenida a partir de su modelo de recurrencia sísmica.
-- $f_R(R|M)$ es la función de densidad de probabilidad de la distancia $R$ al sitio, condicional a la magnitud $M$.
-- $P(IM > x \mid M, R)$ es la probabilidad de que la intensidad del movimiento del suelo supere el valor $x$, dado un sismo de magnitud $M$ a una distancia $R$, determinada a través de **leyes de atenuación** (GMPEs).
+- \\(N_s\\) es el número de fuentes sismogénicas consideradas.
+- \\(nu_i(M)\\) representa la **tasa anual de ocurrencia** de sismos de magnitud M en la fuente i, obtenida a partir de su modelo de recurrencia sísmica.
+- \\(f_R(R|M)\\) es la función de densidad de probabilidad de la distancia $R$ al sitio, condicional a la magnitud **M**.
+- \\(P(IM > x \mid M, R)\\) es la probabilidad de que la intensidad del movimiento del suelo supere el valor **x**, dado un sismo de magnitud **M** a una distancia **R**, determinada a través de **leyes de atenuación** (GMPEs).
 
 Esta integral se evalúa para cada fuente sismogénica y sus resultados se suman, obteniendo así la contribución total de todas las fuentes a la amenaza sísmica del sitio.
 
@@ -52,7 +52,7 @@ Esta integral se evalúa para cada fuente sismogénica y sus resultados se suman
 
 ### Probabilidad de excedencia en un periodo de tiempo
 
-A partir de esta tasa, se puede calcular la **probabilidad de excedencia** para un periodo de tiempo $T$ mediante:
+A partir de esta tasa, se puede calcular la **probabilidad de excedencia** para un periodo de tiempo **T** mediante:
 
 $$
 P(IM > x; T) = 1 - e^{-\lambda(IM > x) \cdot T}
