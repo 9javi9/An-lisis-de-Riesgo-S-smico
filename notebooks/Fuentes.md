@@ -4,7 +4,7 @@ parent: Peligro Sísmico
 nav_order: 1
 ---
 
-# Fuentes Sísmicas generadoras en el Perú
+# Fuentes
 
 Se consideran las 33 fuentes simogénicas propuestas en el estudio de Peligro Sísmico elaborado por el IGP en el año 2014, las cuales se clasifican en 3 tipos:
 
