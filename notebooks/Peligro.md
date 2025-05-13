@@ -73,7 +73,7 @@ $$
 
 ### Valores empíricos
 
-| **Referencia**                              | **$K_1$** | **$K_2$**  |
+| **Referencia**                              | **\\(K_1\\)** | \\(K_2\\)**  |
 |--------------------------------------------|-----------|------------|
 | Brune (1970)                                | 0.00381   | 1.15130    |
 | _Singh et al. (1980)_                       | 0.00564   | 1.15130    |
@@ -82,17 +82,17 @@ $$
 | **Wells and Coppersmith (1994)** Normal     | 0.02072   | 0.94406    |
 | **Wells and Coppersmith (1994)** All        | 0.01015   | 1.04768    |
 
-## Estimación de la Variabilidad del Parámetro $\beta$
+## Estimación de la Variabilidad del Parámetro \\(\beta\\)
 
-El coeficiente de variación del parámetro $\beta$ en el modelo de Gutenberg-Richter se puede estimar utilizando el método de máxima verosimilitud (MLE), mediante el cálculo de la varianza del estimador $\hat{\beta}$:
+El coeficiente de variación del parámetro \\(\beta\\) en el modelo de Gutenberg-Richter se puede estimar utilizando el método de máxima verosimilitud (MLE), mediante el cálculo de la varianza del estimador $\hat{\beta}$:
 
 $$
 CV_{\beta} = \frac{\sigma_{\beta}}{\beta} = \frac{1}{\sqrt{n}}
 $$
 
-## Estimación del Valor Extremo de Magnitud Truncada $M_u$
+## Estimación del Valor Extremo de Magnitud Truncada \\(M_u\\)
 
-Para la estimación del valor extremo de magnitud truncada $M_u$, se puede emplear el método propuesto por **Kijko & Graham (1998)**. De manera conservadora, en ausencia de una base de datos suficientemente robusta, se recomienda asumir como valor esperado de $M_u$:
+Para la estimación del valor extremo de magnitud truncada \\(M_u\\), se puede emplear el método propuesto por **Kijko & Graham (1998)**. De manera conservadora, en ausencia de una base de datos suficientemente robusta, se recomienda asumir como valor esperado de \\(M_u\\):
 
 - el máximo del catálogo + 0.2 a 0.3 unidades,  
 - con un coeficiente de variación (CV) de aproximadamente **0.2**.
