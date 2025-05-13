@@ -2,8 +2,9 @@
 title: Home
 nav_order: 1
 ---
-
-<h1 style="text-align: center; font-size: 60px;">Análisis de Riesgo Sísmico</h1>
+<div style="text-align: center;">
+  # Análisis de Riesgo Sísmico
+</div>
 
 <img src="IMG/PGA.png" width="400" style="display:block; margin:auto;"/>
 
