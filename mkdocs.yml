@@ -1,0 +1,27 @@
+site_name: Evaluación de Riesgo Sísmico
+site_url: https://9javi9.github.io/Analisis-de-Riesgo-Sismico/
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+
+repo_url: https://github.com/<TU_USUARIO>/<NOMBRE_DEL_REPO>
+repo_name: GitHub
+
+nav:
+  - Home: index.md
+  - Notebook:
+      - Goes timelapse: notebooks/goes-timelapse.md
+      - Pakistan floods: notebooks/pakistan-floods.md
+      - Morocco earthquake: notebooks/morocco-earthquake.md
+  - Blog: blog.md
+  - Markdown:
+      - Cheatsheet: markdown/cheatsheet.md
+  - YouTube Channel: youtube.md
+  - Report Issues: issues.md
