@@ -10,7 +10,7 @@ OpenQuake es una plataforma de software de código abierto desarrollada por la G
 
 Entre las principales ventajas de OpenQuake frente a CRISIS 2007 se encuentra su mayor flexibilidad y capacidad para integrar modelos complejos, como fallas con geometría 3D, sistemas de fallas compuestas y modelos espacio-temporales de recurrencia sísmica. Además, OpenQuake es mantenido activamente, con soporte para formatos estándares como los de GEM y compatibilidad con bases de datos internacionales. También permite la evaluación conjunta del peligro y riesgo sísmico en grandes regiones, integrando componentes como vulnerabilidad y exposición. En resumen, OpenQuake representa una evolución moderna de las herramientas de evaluación sísmica, siendo más adecuada para estudios integrales, reproducibles y actualizados con las mejores prácticas internacionales.
 
-## Modelo Probabilistico Peruano
+## Modelo Probabilístico Peruano
 
 El primer paso en el proceso consiste en generar el archivo job.ini, que establece los parámetros esenciales para la simulación de peligros sísmicos. En este archivo se define detalladamente el área de estudio, especificando las coordenadas geográficas que delimitan la región a analizar. Además, se establece la discretización espacial, lo que permite dividir el área en una malla que facilita la resolución del modelo sísmico. A través de este archivo, también se configuran los periodos de retorno correspondientes a diferentes niveles de riesgo sísmico, lo cual es fundamental para calcular las probabilidades de ocurrencia de terremotos de determinada magnitud durante un período de tiempo específico.
 
