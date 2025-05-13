@@ -1,9 +1,9 @@
 ---
-title: Notebook
+title: Modulos
 nav_order: 2
 has_children: true
 ---
 
-# Sección Notebook
+# Modulos
 
-Aquí se listan los notebooks relacionados a eventos.
+En el proyecto de evaluación de Riesgo Sísmico se veran los siguientes modulos:
