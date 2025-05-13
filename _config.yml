@@ -12,6 +12,10 @@ aux_links:
   "Reportar problema":
     - https://github.com/9javi9/Analisis-de-Riesgo-Sismico/issues
 
+head:
+  - "<link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />"
+  - "<script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>"
+
 # Opcional: orden de navegación
 nav_sort: case_sensitive
 
